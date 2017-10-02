@@ -6,7 +6,8 @@ int main()
   while (scanf("%d", &n) == 1 && n)
   {
     int s = 0;
-    for (int i = 0; i < n; i++) {
+    for (int i = 0; i < n; i++)
+    {
       scanf("%d", &x);
       s += x;
       if (x < min) min = x;

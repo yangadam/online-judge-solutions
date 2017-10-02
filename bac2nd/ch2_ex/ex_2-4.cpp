@@ -6,7 +6,8 @@ int main()
   {
     if (n > m) { int t = n; n = m; m = t; }
     double sum = 0;
-    for (int i = n; i <= m; i++) {
+    for (int i = n; i <= m; i++)
+    {
       sum += 1.0 / i / i;
     }
     printf("Case %d: %.5f\n", ++kase, sum);
