@@ -1,6 +1,9 @@
 #include <stdio.h>
 char s[] = "`1234567890-=QWERTYUIOP[]\\ASDFGHJKL;'ZXCVBNM,./";
 int main() {
+  #ifndef ONLINE_JUDGE
+    freopen("input/uva10082.in", "r", stdin);
+  #endif
   int i, c;
   while ((c = getchar()) != EOF) {
     for (i=1; s[i] && s[i]!=c; i++); // 找错位之后的字符在常量表中的位置

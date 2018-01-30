@@ -1,5 +1,9 @@
-#include<stdio.h>
+#include<cstdio>
+
 int main() {
+  #ifndef ONLINE_JUDGE
+    freopen("input/uva1585.in", "r", stdin);
+  #endif
   int T;
   scanf("%d", &T);
   while (T--) {

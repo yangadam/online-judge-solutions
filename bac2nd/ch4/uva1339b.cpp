@@ -5,6 +5,9 @@
 using namespace std;
 
 int main() {
+  #ifndef ONLINE_JUDGE
+    freopen("input/uva1339.in", "r", stdin);
+  #endif
   char s1[200], s2[200];
   while(scanf("%s%s", s1, s2) == 2) {
     int n = strlen(s1);

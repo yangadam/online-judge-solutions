@@ -1,4 +1,5 @@
-#include<stdio.h>
+#include<cstdio>
+
 int main()
 {
   int kase = 0, a, b, c;

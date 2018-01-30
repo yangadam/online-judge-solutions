@@ -34,6 +34,9 @@ void ins(char type) {
 }
 
 int main() {
+  #ifndef ONLINE_JUDGE
+    freopen("input/uva512.in", "r", stdin);
+  #endif
   int r1, c1, r2, c2, q, kase = 0;
   char cmd[10];
   memset(d, 0, sizeof(d));

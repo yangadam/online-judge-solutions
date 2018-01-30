@@ -1,6 +1,10 @@
-#include<stdio.h>
-#include<string.h>
+#include<cstdio>
+#include<cstring>
+
 int main() {
+  #ifndef ONLINE_JUDGE
+    freopen("input/uva202.in", "r", stdin);
+  #endif
   int a, b, mark[3001], result[51];
   while(scanf("%d%d", &a, &b) == 2) {
     memset(mark, 0, sizeof(mark));

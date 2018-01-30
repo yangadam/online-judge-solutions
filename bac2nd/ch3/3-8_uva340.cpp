@@ -2,6 +2,9 @@
 #define maxn 1000 + 10
 
 int main() {
+  #ifndef ONLINE_JUDGE
+    freopen("input/uva340.in", "r", stdin);
+  #endif
   int n, a[maxn], b[maxn];
   int kase = 0;
   while(scanf("%d", &n) == 1 && n) { // n=0时输入结束

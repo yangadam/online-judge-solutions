@@ -4,6 +4,9 @@
 int ans[maxn];
 
 int main() {
+  #ifndef ONLINE_JUDGE
+    freopen("input/uva1583.in", "r", stdin);
+  #endif
   int T, n;
   memset(ans, 0, sizeof(ans));
   for(int m = 1; m < maxn; m++) {

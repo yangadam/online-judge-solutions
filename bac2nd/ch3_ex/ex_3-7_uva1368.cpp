@@ -1,6 +1,11 @@
-#include<stdio.h>
+#include<cstdio>
+
 char dna[50][1001];
+
 int main() {
+  #ifndef ONLINE_JUDGE
+    freopen("input/uva1368.in", "r", stdin);
+  #endif
   int T, map[26];
   char set[] = "ACGT";
   for (int i = 0; i < 4; i++) map[set[i]-'A'] = i;

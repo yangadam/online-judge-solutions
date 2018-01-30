@@ -102,6 +102,9 @@ void stat() {
 }
 
 int main() {
+  #ifndef ONLINE_JUDGE
+    freopen("input/uva12412.in", "r", stdin);
+  #endif
   for(;;) {
     int choice;
     printf("Welcome to Student Performance Management System (SPMS).\n");

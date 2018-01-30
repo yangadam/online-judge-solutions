@@ -1,5 +1,6 @@
-#include<stdio.h>
-#include<string.h>
+#include<cstdio>
+#include<cstring>
+
 int KMP(char *str) {
   int a = -1, b = 1;
   int prefix[81];
@@ -11,7 +12,11 @@ int KMP(char *str) {
   }
   return a + 1;
 }
+
 int main() {
+  #ifndef ONLINE_JUDGE
+    freopen("input/uva455.in", "r", stdin);
+  #endif
   int T;
   scanf("%d", &T);
   while(T--) {

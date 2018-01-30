@@ -40,6 +40,9 @@ void printcodes() {
 }
 
 int main() {
+  #ifndef ONLINE_JUDGE
+    freopen("input/uva213.in", "r", stdin);
+  #endif
   while(readcodes()) {
     //printcodes();
     for(;;) {

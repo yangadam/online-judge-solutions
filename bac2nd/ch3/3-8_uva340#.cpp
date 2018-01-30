@@ -1,8 +1,13 @@
-#include<stdio.h>
-#include<string.h>
+#include<cstdio>
+#include<cstring>
+
 #define MAXN 1000 + 10
+
 int main()
 {
+  #ifndef ONLINE_JUDGE
+    freopen("input/uva340.in", "r", stdin);
+  #endif
   int n, num = 0;
   while(scanf("%d", &n) == 1 && n)
   {

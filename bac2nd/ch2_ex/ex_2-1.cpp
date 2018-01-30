@@ -1,5 +1,7 @@
-#include<stdio.h>
+#include<cstdio>
+
 #define INF 1000000000
+
 int main()
 {
   for (int i = 100; i < 999; i++)

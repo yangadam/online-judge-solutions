@@ -1,5 +1,9 @@
-#include<stdio.h>
+#include<cstdio>
+
 int main() {
+  #ifndef ONLINE_JUDGE
+    freopen("input/uva232.in", "r", stdin);
+  #endif
   int m, n, kase = 0;
   char puzzle[10][11];
   while(scanf("%d%d", &m, &n) == 2) {

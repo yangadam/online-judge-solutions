@@ -12,6 +12,9 @@ void remove(int i)
 
 int main()
 {
+  #ifndef ONLINE_JUDGE
+    freopen("input/uva133.in", "r", stdin);
+  #endif
 	int N, k, m;
 	while(scanf("%d%d%d", &N, &k, &m) && N)
 	{

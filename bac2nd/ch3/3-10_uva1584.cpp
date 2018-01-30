@@ -12,6 +12,9 @@ int less(const char* s, int p, int q) {
 }
 
 int main() {
+  #ifndef ONLINE_JUDGE
+    freopen("input/uva1584.in", "r", stdin);
+  #endif
   int T;
   char s[maxn];
   scanf("%d", &T);

@@ -1,4 +1,5 @@
-#include<stdio.h>
+#include<cstdio>
+
 void display(char puzzle[][7]) {
   for (int i = 0; i < 5; i++) {
     for (int j = 0; j < 5; j++) {
@@ -9,6 +10,9 @@ void display(char puzzle[][7]) {
   }
 }
 int main() {
+  #ifndef ONLINE_JUDGE
+    freopen("input/uva227.in", "r", stdin);
+  #endif
   char puzzle[5][7];
   int kase = 0;
   while(fgets(puzzle[0], 7, stdin)) {

@@ -15,6 +15,9 @@ void guess(char ch) {
 }
 
 int main() {
+  #ifndef ONLINE_JUDGE
+    freopen("input/uva489.in", "r", stdin);
+  #endif
   int rnd;
   while(scanf("%d%s%s", &rnd, s, s2) == 3 && rnd != -1) {
     printf("Round %d\n", rnd);

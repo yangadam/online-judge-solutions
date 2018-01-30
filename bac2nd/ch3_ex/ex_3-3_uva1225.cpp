@@ -1,6 +1,10 @@
-#include<stdio.h>
-#include<string.h>
+#include<cstdio>
+#include<cstring>
+
 int main() {
+  #ifndef ONLINE_JUDGE
+    freopen("input/uva1225.in", "r", stdin);
+  #endif
   int T;
   scanf("%d", &T);
   while (T--) {

@@ -1,7 +1,12 @@
-#include<stdio.h>
+#include<cstdio>
+
 #define maxn 1000000
 char s[maxn], t[maxn];
+
 int main() {
+  #ifndef ONLINE_JUDGE
+    freopen("input/uva10340.in", "r", stdin);
+  #endif
   while(scanf("%s%s", s, t) == 2) {
     int i = 0, j = 0;
     for(; s[i]; i++) {

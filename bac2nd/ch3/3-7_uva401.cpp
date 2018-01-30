@@ -10,6 +10,9 @@ char r(char ch) {
 }
 
 int main() {
+  #ifndef ONLINE_JUDGE
+    freopen("input/uva401.in", "r", stdin);
+  #endif
   char s[30];
   while(scanf("%s", s) == 1) {
     int len = strlen(s);

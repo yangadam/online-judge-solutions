@@ -1,5 +1,5 @@
-#include<stdio.h>
-#include<math.h>
+#include<cstdio>
+
 int main()
 {
   const int PRICE = 95;

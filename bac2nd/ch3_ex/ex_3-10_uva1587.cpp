@@ -1,8 +1,12 @@
-#include<stdio.h>
-#include<string.h>
+#include<cstdio>
+#include<cstring>
 #include<utility>
 using namespace std;
+
 int main() {
+  #ifndef ONLINE_JUDGE
+    freopen("input/uva1587.in", "r", stdin);
+  #endif
   int w, h;
   int ws[6], hs[6], cnts[6];
   while(scanf("%d%d", &w, &h) == 2) {

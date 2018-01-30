@@ -1,6 +1,8 @@
-#include<stdio.h>
-#include<string.h>
+#include<cstdio>
+#include<cstring>
+
 #define maxn 101
+
 int shift(char s[], char t[], int ls, int lt) {
   for (int i = 0; i < ls; i++) {
     int j = 0;
@@ -9,7 +11,11 @@ int shift(char s[], char t[], int ls, int lt) {
   }
   return ls + lt;
 }
+
 int main() {
+  #ifndef ONLINE_JUDGE
+    freopen("input/uva1588.in", "r", stdin);
+  #endif
   char top[maxn], bottom[maxn];
   while (scanf("%s%s", bottom, top) == 2) {
     int ltop = strlen(top), lbottom = strlen(bottom);

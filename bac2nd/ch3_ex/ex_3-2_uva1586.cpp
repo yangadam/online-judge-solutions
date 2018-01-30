@@ -1,6 +1,10 @@
-#include<stdio.h>
-#include<ctype.h>
+#include<cstdio>
+#include<cctype>
+
 int main() {
+  #ifndef ONLINE_JUDGE
+    freopen("input/uva1586.in", "r", stdin);
+  #endif
   int T;
   double gmol['Z'] = { 0 };
   gmol['C'] = 12.01;

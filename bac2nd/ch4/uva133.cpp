@@ -10,6 +10,9 @@ int go(int p, int d, int t) {
 }
 
 int main() {
+  #ifndef ONLINE_JUDGE
+    freopen("input/uva133.in", "r", stdin);
+  #endif
   while(scanf("%d%d%d", &n, &k, &m) == 3 && n) {
     for(int i = 1; i <= n; i++) a[i] = i;
     int left = n; //还剩下的人数

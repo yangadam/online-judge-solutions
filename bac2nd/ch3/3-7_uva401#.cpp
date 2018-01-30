@@ -1,10 +1,16 @@
-#include<stdio.h>
-#include<string.h>
-#include<ctype.h>
+#include<cstdio>
+#include<cstring>
+#include<cctype>
+
 #define MAXN 1000
-char *g_alpha = "A   3  HIL JM O   2TUVWXY5";
-char *g_digit = "1SE Z  8 ";
+
+char g_alpha[] = "A   3  HIL JM O   2TUVWXY5";
+char g_digit[] = "1SE Z  8 ";
+
 int main() {
+  #ifndef ONLINE_JUDGE
+    freopen("input/uva401.in", "r", stdin);
+  #endif
   char str[MAXN];
   while(scanf("%s", str) == 1) {
     bool is_palin = true, is_mirror = true;

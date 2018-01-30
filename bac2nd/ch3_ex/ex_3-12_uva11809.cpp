@@ -1,8 +1,13 @@
-#include<stdio.h>
-#include<math.h>
-#include<string.h>
+#include<cstdio>
+#include<cmath>
+#include<cstring>
+
 #define eps 1e-6
+
 int main() {
+  #ifndef ONLINE_JUDGE
+    freopen("input/uva11809.in", "r", stdin);
+  #endif
   double A[10][31], B[10][31];
   for (int M = 0; M <= 9; M++) {
     for (int E = 1; E <=30; E++) {
