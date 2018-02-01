@@ -5,12 +5,12 @@ int main() {
   #ifndef ONLINE_JUDGE
     freopen("input/uva1586.in", "r", stdin);
   #endif
-  int T;
-  double gmol['Z'] = { 0 };
+  const double gmol['Z'] = { 0 };
   gmol['C'] = 12.01;
   gmol['H'] = 1.008;
   gmol['O'] = 16.00;
   gmol['N'] = 14.01;
+  int T;
   scanf("%d", &T);
   while (T--) {
     char str[81];

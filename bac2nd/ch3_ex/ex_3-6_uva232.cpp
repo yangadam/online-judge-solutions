@@ -7,7 +7,7 @@ int main() {
   int m, n, kase = 0;
   char puzzle[10][11];
   while(scanf("%d%d", &m, &n) == 2) {
-    if(kase) puts("");
+    if(kase) putchar('\n');
     printf("puzzle #%d:\n", ++kase);
     for (int i = 0; i < m; i++) scanf("%s", puzzle[i]);
     puts("Across");
@@ -21,11 +21,11 @@ int main() {
           putchar(puzzle[i][j]);
           start = 0;
         } else if(!start) {
-          puts("");
+          putchar('\n');
           start = 1;
         }
       }
-      if(!start) puts("");
+      if(!start) putchar('\n');
     }
     puts("Down");
     for (int i = 0; i < m; i++)
@@ -34,7 +34,7 @@ int main() {
           printf("%3d.", num[i][j]);
           int r = i;
           while(r < m && puzzle[r][j] != '*') putchar(puzzle[r++][j]);
-          puts("");
+          putchar('\n');
         }
   }
   return 0;

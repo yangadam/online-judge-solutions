@@ -1,7 +1,6 @@
 #include<cstdio>
 
-int main()
-{
+int main() {
   const int PRICE = 95;
   int n;
   double totalPrice;

@@ -25,7 +25,7 @@ int main() {
     int len = strlen(word), t = KMP(word);
     if (len % (len - t)) printf("%d\n", len);
     else printf("%d\n", len -t);
-    if(T) puts("");
+    if(T) putchar('\n');
   }
   return 0;
 }

@@ -17,7 +17,7 @@ int main() {
           if(word[j] != word[j % i]) { ok = 0; break; }
         if(ok) { printf("%d\n", i); break; }
     }
-    if(T) puts("");
+    if(T) putchar('\n');
   }
   return 0;
 }

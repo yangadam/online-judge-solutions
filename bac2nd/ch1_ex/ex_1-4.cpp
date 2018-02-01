@@ -1,8 +1,7 @@
 #include<cstdio>
 #include<cmath>
 
-int main()
-{
+int main() {
   int n;
   double rad;
   scanf("%d", &n);

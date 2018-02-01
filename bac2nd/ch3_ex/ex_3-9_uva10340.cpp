@@ -1,6 +1,6 @@
 #include<cstdio>
 
-#define maxn 1000000
+const int maxn = 1000000;
 char s[maxn], t[maxn];
 
 int main() {

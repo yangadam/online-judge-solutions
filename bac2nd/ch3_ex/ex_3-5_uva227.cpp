@@ -6,9 +6,10 @@ void display(char puzzle[][7]) {
       if (j) putchar(' ');
       putchar(puzzle[i][j]);
     }
-    puts("");
+    putchar('\n');
   }
 }
+
 int main() {
   #ifndef ONLINE_JUDGE
     freopen("input/uva227.in", "r", stdin);
@@ -17,7 +18,7 @@ int main() {
   int kase = 0;
   while(fgets(puzzle[0], 7, stdin)) {
     if (puzzle[0][0] == 'Z') break;
-    if (kase) puts("");
+    if (kase) putchar('\n');
     printf("Puzzle #%d:\n", ++kase);
     fgets(puzzle[1], 7, stdin);
     fgets(puzzle[2], 7, stdin);

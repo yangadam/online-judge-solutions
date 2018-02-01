@@ -13,7 +13,7 @@ int main()
 	while(scanf("%d%d", &n, &p) && n && p)
 	{
 		getchar();
-		if (cnt) puts("");
+		if (cnt) putchar('\n')
 		char req[85], pro[85];
 		float price, min = -1;
 		int met, max = -1;

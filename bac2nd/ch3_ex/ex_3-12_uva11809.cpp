@@ -2,7 +2,7 @@
 #include<cmath>
 #include<cstring>
 
-#define eps 1e-6
+const double eps = 1e-6;
 
 int main() {
   #ifndef ONLINE_JUDGE

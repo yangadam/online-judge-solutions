@@ -3,6 +3,7 @@
 #include<utility>
 using namespace std;
 
+// TODO rewrite with STL
 int main() {
   #ifndef ONLINE_JUDGE
     freopen("input/uva1587.in", "r", stdin);

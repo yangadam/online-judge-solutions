@@ -7,7 +7,7 @@ int main() {
     freopen("input/uva1368.in", "r", stdin);
   #endif
   int T, map[26];
-  char set[] = "ACGT";
+  const char set[] = "ACGT";
   for (int i = 0; i < 4; i++) map[set[i]-'A'] = i;
   scanf("%d", &T);
   while(T--) {
