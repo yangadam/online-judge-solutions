@@ -2,16 +2,16 @@
 #include<cstring>
 #include<cctype>
 
-#define MAXN 1000
+const int maxn = 1000;
 
-char g_alpha[] = "A   3  HIL JM O   2TUVWXY5";
-char g_digit[] = "1SE Z  8 ";
+const char* g_alpha = "A   3  HIL JM O   2TUVWXY5";
+const char* g_digit = "1SE Z  8 ";
 
 int main() {
   #ifndef ONLINE_JUDGE
     freopen("input/uva401.in", "r", stdin);
   #endif
-  char str[MAXN];
+  char str[maxn];
   while(scanf("%s", str) == 1) {
     bool is_palin = true, is_mirror = true;
     int len = strlen(str);
