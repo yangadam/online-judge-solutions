@@ -51,7 +51,7 @@ void move() {
   scanf(" %c %c", &xc, &yc);
   int x = xc - '0', y = yc - '0';
   board[x][y] = cur;
-  if (cur == 'W') ++W; else ++B;
+  if (cur == 'W') W++; else B++;
   for (int i = 0; i < 8; i++) {
     int tmpx = x, tmpy = y;
     while (!outOfBox(tmpx+dir[i][0], tmpy+dir[i][1]) 
@@ -60,7 +60,7 @@ void move() {
     if (board[tmpx][tmpy] == cur && (tmpx != x || tmpy != y)) {
       while ((tmpx-=dir[i][0]) != x | (tmpy-=dir[i][1]) != y) {
         board[tmpx][tmpy] = cur;
-        if (cur == 'W') ++W, --B; else ++B, --W;
+        if (cur == 'W') W++, B--; else B++, W--;
       }
     }
   }

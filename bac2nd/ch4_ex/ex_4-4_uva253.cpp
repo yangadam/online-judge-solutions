@@ -12,7 +12,7 @@ int r[24][6] ={
 bool find(char* cube) {
 	for (int i = 0; i < 24; i++) {
 		int j = 0;
-		while (j < 6 && cube[j+6] == cube[r[i][j]-1]) ++j;
+		while (j < 6 && cube[j+6] == cube[r[i][j]-1]) j++;
 		if (j == 6) return true;
 	}
 	return false;

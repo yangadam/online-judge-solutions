@@ -7,7 +7,7 @@ int KMP(char *str) {
   prefix[0] = -1;
   while(str[b]) {
     while(a >= 0 && str[a+1] != str[b]) a = prefix[a];
-    if(str[a+1] == str[b]) ++a;
+    if(str[a+1] == str[b]) a++;
     prefix[b++] = a;
   }
   return a + 1;

@@ -9,7 +9,7 @@ int numOfSameRow(int x, int y, int xi, int yi) {
   int cnt = 0;
   for (int i = 0; i < N; i++) {
     if (xi == rx[i] && (yi-ry[i])*(ry[i]-y) > 0)
-      ++cnt;
+      cnt++;
   }
   return cnt;
 }
@@ -18,7 +18,7 @@ int numOfSameColumn(int x, int y, int xi, int yi) {
   int cnt = 0;
   for (int i = 0; i < N; i++) {
     if (yi == ry[i] && (xi-rx[i])*(rx[i]-x) > 0)
-      ++cnt;
+      cnt++;
   }
   return cnt;
 }

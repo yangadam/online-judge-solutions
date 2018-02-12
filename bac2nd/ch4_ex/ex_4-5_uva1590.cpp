@@ -9,7 +9,7 @@ void resolveIp(int n) {
     if (sum > maxIp) maxIp = sum;
   }
   unsigned mask = minIp ^ maxIp, bit = 0;
-  while (mask) { mask >>= 1; ++bit; }
+  while (mask) { mask >>= 1; bit++; }
   mask = (bit >= 32) ? 0 : (0xffffffff << bit);
   int net = minIp & mask;
   printf("%d.%d.%d.%d\n", (net>>24)&255, (net>>16)&255, (net>>8)&255, net&255);

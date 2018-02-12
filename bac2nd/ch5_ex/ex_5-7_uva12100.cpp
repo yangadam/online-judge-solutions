@@ -30,7 +30,7 @@ int main() {
         jobs.push(jobs.front());
         jobs.pop();
       }
-      ++time;
+      time++;
       if (jobs.front().seq == m) break;
       priorities.pop();
       jobs.pop();

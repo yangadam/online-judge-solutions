@@ -19,16 +19,16 @@ int main() {
   while (T--) {
     ducci.clear(); v1.clear();
     cin >> n;
-    for (int i = 0; i < n; ++i) {
+    for (int i = 0; i < n; i++) {
       cin >> el;
       v1.push_back(el);
     }
-    for (int i = 0; i < loop; ++i) {
+    for (int i = 0; i < loop; i++) {
       int cnt = 0, el;
       pair<std::set< vector<int> >::iterator, bool> ret = ducci.insert(v1);
       if (!ret.second) { cout << "LOOP" << endl; break; }
       v2.clear();
-      for (int j = 0; j < n; ++j) {
+      for (int j = 0; j < n; j++) {
         el = abs(v1[j] - v1[(j+1)%n]), cnt |= el;
         v2.push_back(el);
       }
@@ -50,9 +50,9 @@ const int loop = 1000;
 bool next(int* A, int n) {
   int cnt = 0;
   A[n] = A[0];
-  for (int j = 0; j < n; ++j) {
+  for (int j = 0; j < n; j++) {
     A[j] = abs(A[j] - A[j+1]);
-    if (A[j]) ++cnt;
+    if (A[j]) cnt++;
   }
   return cnt == 0;
 }
@@ -65,7 +65,7 @@ int main() {
   cin >> T;
   while (T--) {
     cin >> n;
-    for (int i = 0; i < n; ++i) cin >> A[i];
+    for (int i = 0; i < n; i++) cin >> A[i];
     for (int i = 0; i < loop; i++) {
       if (next(A, n)) {
         cout << "ZERO" << endl;

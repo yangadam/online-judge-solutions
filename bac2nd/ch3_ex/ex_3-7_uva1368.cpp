@@ -17,7 +17,7 @@ int main() {
     for (int j = 0; j < n; j++) {
       int count[4] = { 0 };
       for (int i = 0; i < m; i++) {
-        ++count[map[dna[i][j]-'A']];
+        count[map[dna[i][j]-'A']]++;
       }
       int max = 0;
       for (int i = 0; i < 4; i++)

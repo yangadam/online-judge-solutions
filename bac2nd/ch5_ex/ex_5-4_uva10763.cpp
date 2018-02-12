@@ -16,7 +16,7 @@ int main() {
       int& cnt = exchg[match];
       if (cnt <= 1) exchg.erase(match);
       else if (cnt > 1) --cnt;
-      if (cnt == 0) ++exchg[make_pair(A, B)];
+      if (cnt == 0) exchg[make_pair(A, B)]++;
     }
     cout << (exchg.empty() ? "YES" : "NO") << endl;
     exchg.clear();

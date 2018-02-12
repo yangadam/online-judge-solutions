@@ -16,7 +16,7 @@ void printWord(string& word, int idx) {
 
 void printLine(vector<string>& words) {
   int size = words.size();
-  for (int i = 0; i < size - 1; ++i) {
+  for (int i = 0; i < size - 1; i++) {
     printWord(words[i], i);
   }
   cout << words[size-1] << '\n';
@@ -38,7 +38,7 @@ int main() {
     }
     code.push_back(words);
   }
-  for (int i = 0; i < code.size(); ++i)
+  for (int i = 0; i < code.size(); i++)
     printLine(code[i]);
   return 0;
 }

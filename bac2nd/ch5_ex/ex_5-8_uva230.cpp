@@ -25,7 +25,7 @@ struct Book {
 vector<Book> shelves;
 
 void borrow(string& title) {
-  for (int i = 0; i < shelves.size(); ++i)
+  for (int i = 0; i < shelves.size(); i++)
     if (shelves[i].title == title) {
       shelves[i].borrowed = true;
       return;
@@ -33,7 +33,7 @@ void borrow(string& title) {
 }
 
 void ret(string& title) {
-  for (int i = 0; i < shelves.size(); ++i)
+  for (int i = 0; i < shelves.size(); i++)
     if (shelves[i].title == title) {
       shelves[i].returned = true;
       return;
@@ -41,7 +41,7 @@ void ret(string& title) {
 }
 
 void shelve() {
-  for (int i = 0; i < shelves.size(); ++i) {
+  for (int i = 0; i < shelves.size(); i++) {
     if (shelves[i].returned) {
       cout << "Put " << shelves[i].title << " ";
       int j;

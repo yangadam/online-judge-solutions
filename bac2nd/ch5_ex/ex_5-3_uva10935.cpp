@@ -11,7 +11,7 @@ int main() {
   while (cin >> n && n) {
     queue<int> cards;
     cout << "Discarded cards:";
-    for (int i = 1; i <= n; ++i) cards.push(i);
+    for (int i = 1; i <= n; i++) cards.push(i);
     while (cards.size() > 2) {
       cout << " " << cards.front() << ","; cards.pop();
       cards.push(cards.front()); cards.pop();

@@ -30,7 +30,7 @@ bool findSquare(int size, int n) {
       if (!hasH(i + size, j, size)) continue;
       if (!hasV(i, j, size)) continue;
       if (!hasV(i, j + size, size)) continue;
-      ++cnt, found = true;
+      cnt++, found = true;
     }
   }
   if (cnt) printf("%d square (s) of size %d\n", cnt, size);
@@ -52,8 +52,8 @@ int main() {
       char dir;
       int x, y;
       scanf(" %c%d%d", &dir, &x, &y);
-      if (dir == 'H') H[x][y] = 1, ++numH;
-      else V[y][x] = 1, ++numV;
+      if (dir == 'H') H[x][y] = 1, numH++;
+      else V[y][x] = 1, numV++;
     }
     for (int i = 1; i <= n; i++) {
       if (m/4 < i || numH/2 < i || numV/2 < i) break;

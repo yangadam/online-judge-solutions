@@ -14,7 +14,7 @@ struct Point {
 set<Point> points;
 
 bool isSymmetric(int len) {
-  for (set<Point>::iterator it = points.begin(); it != points.end(); ++it) {
+  for (set<Point>::iterator it = points.begin(); it != points.end(); it++) {
     Point right(len - it->x, it->y);
     if (!points.count(right)) return false;
   }

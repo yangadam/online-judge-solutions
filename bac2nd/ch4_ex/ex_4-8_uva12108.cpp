@@ -28,17 +28,17 @@ void printStatus(int sleep) {
 
 int getAwakeTime(int cycle) {
   int sleep = 0;
-  for (int i = 0; i < n; i++) if (C[i] > A[i]) ++sleep; 
+  for (int i = 0; i < n; i++) if (C[i] > A[i]) sleep++; 
   for (int t = 1; t <= cycle + 1; t++) {
     // printStatus(sleep);
     if (sleep == 0) return t;
     int cnt = 0;
     for (int i = 0; i < n; i++) {
-      ++C[i];
+      C[i]++;
       if (C[i] == AB[i] + 1) C[i] = 1, --cnt;
       else if (C[i] == A[i] + 1){
         if (sleep <= n - sleep) C[i] = 1;
-        else ++cnt;
+        else cnt++;
       }
     }
     sleep += cnt;

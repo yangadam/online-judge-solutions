@@ -16,7 +16,7 @@ int main() {
       int start = 1;
       for (int j = 0; j < n; j++) {
         if (puzzle[i][j] != '*') {
-          if (i == 0 || j == 0 || puzzle[i-1][j] == '*' || puzzle[i][j-1] == '*') num[i][j] = ++count;
+          if (i == 0 || j == 0 || puzzle[i-1][j] == '*' || puzzle[i][j-1] == '*') num[i][j] = count++;
           if (start) printf("%3d.", count);
           putchar(puzzle[i][j]);
           start = 0;

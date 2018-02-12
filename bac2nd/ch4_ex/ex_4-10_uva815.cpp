@@ -14,7 +14,7 @@ void collectWater(int N, int water) {
     if (remain > full) {
        level = grid[i];
        remain -= full;
-       ++cnt;
+       cnt++;
     } else {
       level += remain / 100.0 / cnt;
       remain = 0;

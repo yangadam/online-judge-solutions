@@ -39,15 +39,15 @@ int main() {
       } else if(dir == 'B') {
         if (x == 4) { err = 1; break; }
         puzzle[x][y] = puzzle[x+1][y];
-        ++x;
+        x++;
       } else if(dir == 'L') {
         if (y == 0) { err = 1; break; }
         puzzle[x][y] = puzzle[x][y-1];
-        --y;
+        y--;
       } else if(dir == 'R') {
         if (y == 4) { err = 1; break; }
         puzzle[x][y] = puzzle[x][y+1];
-        ++y;
+        y++;
       } else if(dir == '0') break;
     }
     if (dir != '0') while((dir = getchar()) != '0');

@@ -18,7 +18,7 @@ string encode(string word) {
 
 int dist(string s1, string s2) {
   int cnt = 0, len1 = s1.length(), len2 = s2.length();
-  while (s1[cnt] == s2[cnt] && s1[cnt] && s2[cnt]) ++cnt;
+  while (s1[cnt] == s2[cnt] && s1[cnt] && s2[cnt]) cnt++;
   if (cnt < len1 && cnt < len2) return -1;
   return max(len1, len2) - cnt;  
 }
@@ -70,8 +70,8 @@ int n = 0, minWord = 0;
 int dist(char* x, char* y) {
   int diff = 0;
   while (*x && *y && *x == *y || !(*x && *y) && *x + *y) {
-    if (*x != *y) ++diff;
-    if (*x) ++x; if (*y) ++y;
+    if (*x != *y) diff++;
+    if (*x) x++; if (*y) y++;
   }
   if (*x && *y) return -1;
   return diff;
@@ -83,7 +83,7 @@ void find(char* input) {
     int diff = dist(input, code[i]);
     // printf("%d (%s) (%s): (%d %d %d)\n", i, input, code[i], minI, minDiff, diff);
     if (diff == -1) continue;
-    if (diff == 0) ++cnt;
+    if (diff == 0) cnt++;
     if (diff < minDiff) { minDiff = diff; minI = i; }
     else if (diff == minDiff && strcmp(word[i], word[minI]) < 0) minI = i;
   }
@@ -105,7 +105,7 @@ int main() {
     cur = word[n];
     if (n && strcmp(word[n], word[minWord]) < 0) minWord = n;
     while (*cur) strcat(code[n], morse[*(cur++)]);
-    ++n;
+    n++;
   }
   
   while (scanf("%s", input) && input[0] != '*') {
