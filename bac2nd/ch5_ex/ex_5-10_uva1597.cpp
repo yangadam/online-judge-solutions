@@ -36,7 +36,7 @@ int main() {
   int N, M, lineNo = 0;
   string line, A, B;
   cin >> N;
-  getline(cin, line);
+  cin.ignore();
   for (int i = 0; i < N; i++) {
     startLine.push_back(lineNo);
     while (getline(cin, line) && line[0] != '*') {
@@ -46,7 +46,7 @@ int main() {
   }
   startLine.push_back(lineNo);
   cin >> M;
-  getline(cin, line);
+  cin.ignore();
   while (M--) {
     getline(cin, line);
     vector<string> cmd = resolveCmd(line);

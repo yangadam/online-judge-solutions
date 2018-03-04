@@ -6,7 +6,6 @@
 #include<set>
 using namespace std;
 
-
 set<string> add, del, chg;
 
 string repr(string s) {
@@ -74,7 +73,7 @@ int main() {
   int T;
   string line;
   cin >> T;
-  getline(cin, line);
+  cin.ignore();
   while (T--) {
     map<string, string> oldDict, newDict;
     readDict(oldDict); readDict(newDict);
