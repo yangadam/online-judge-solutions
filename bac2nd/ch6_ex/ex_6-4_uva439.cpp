@@ -22,7 +22,7 @@ int bfs(Square& src, Square& des) {
 	queue<Square> q;
 	q.push(src);
 	vis[src.x][src.y] = 1;
-	while (!q.empty()) {//可以增加一个vis数组记录被访问过的格子，以增加效率
+	while (!q.empty()) {
 		Square cur = q.front(); q.pop();
 		if (cur == des) return cur.deep;
 		for (int i = 0; i < 8; i++) {
