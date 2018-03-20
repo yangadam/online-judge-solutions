@@ -21,7 +21,7 @@ void addnode(int v, char* s)
 		}
 		else if(s[i] == 'R')
 		{
-			if(!right[u]
+			if(!right[u])
 			right[u] = newnode();
 			u = right[u];
 		}
