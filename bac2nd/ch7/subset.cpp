@@ -1,4 +1,5 @@
-#include<stdio.h>
+#include<cstdio>
+using namespace std;
 
 void print_subset(int n, int* A, int cur) {
   for(int i = 0; i < cur; i++) printf("%d ", A[i]); // 打印当前集合    
@@ -12,6 +13,8 @@ void print_subset(int n, int* A, int cur) {
 
 int A[10];
 int main() {
-  print_subset(5, A, 0);
+  int n;
+  scanf("%d", &n);
+  print_subset(n, A, 0);
   return 0;
 }

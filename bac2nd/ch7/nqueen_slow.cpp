@@ -1,24 +1,24 @@
-#include<stdio.h>
+#include<cstdio>
+using namespace std;
+
 int C[50], tot = 0, n = 8, nc = 0;
 
 void search(int cur) {
   int i, j;
   nc++;
   if(cur == n) {
+    for(i = 0; i < n; i++)
+      for(j = i+1; j < n; j++)
+        if(C[i] == C[j] || i-C[i] == j-C[j] || i+C[i] == j+C[j]) return;
     tot++;
   } else for(i = 0; i < n; i++) {
-    int ok = 1;
     C[cur] = i;
-    for(j = 0; j < cur; j++)
-      if(C[cur] == C[j] || cur-C[cur] == j-C[j] || cur+C[cur] == j+C[j]) {
-        ok = 0;
-        break;
-      }
-    if(ok) search(cur+1);
+    search(cur+1);
   }
 }
 
 int main() {
+  scanf("%d", &n);
   search(0);
   printf("%d\n", tot);
   printf("%d\n", nc);

@@ -1,11 +1,16 @@
-#include<stdio.h>
-int n, L, cnt = 0;
+#include<cstdio>
+
+int n, L, cnt;
 int S[100];
 
 int dfs(int cur) {                                       // 返回0表示已经得到解，无须继续搜索
   if(cnt++ == n) {
-    for(int i = 0; i < cur; i++) printf("%c", 'A'+S[i]); // 输出方案
-    printf("\n");
+    for(int i = 0; i < cur; i++) {
+      if(i % 64 == 0 && i > 0) printf("\n");
+      else if(i % 4 == 0 && i > 0) printf(" ");
+      printf("%c", 'A'+S[i]); // 输出方案
+    }
+    printf("\n%d\n", cur);
     return 0;
   }
   for(int i = 0; i < L; i++) {
@@ -23,7 +28,9 @@ int dfs(int cur) {                                       // 返回0表示已经�
 }
 
 int main() {
-  scanf("%d%d", &n, &L);
-  dfs(0);
+  while(scanf("%d%d", &n, &L) == 2 && n > 0) {
+    cnt = 0;
+    dfs(0);
+  }
   return 0;
 }

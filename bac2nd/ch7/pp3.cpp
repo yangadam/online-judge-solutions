@@ -1,6 +1,7 @@
 #include<cstdio>
 #include<algorithm>
 using namespace std;
+
 int main() {
   int n, p[10];
   scanf("%d", &n);

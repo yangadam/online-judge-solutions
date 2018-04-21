@@ -1,4 +1,5 @@
-#include<stdio.h>
+#include<cstdio>
+using namespace std;
 
 void print_subset(int n, int s) {  // 打印{0, 1, 2, ..., n-1}的子集S
   for(int i = 0; i < n; i++)
@@ -7,7 +8,8 @@ void print_subset(int n, int s) {  // 打印{0, 1, 2, ..., n-1}的子集S
 }
 
 int main() {
-  int n = 5;
+  int n;
+  scanf("%d", &n);
   for(int i = 0; i < (1<<n); i++)  // 枚举各子集所对应的编码 0, 1, 2, ..., 2^n-1
     print_subset(n, i);
   return 0;

@@ -1,4 +1,5 @@
-#include<stdio.h>
+#include<cstdio>
+using namespace std;
 
 void print_subset(int n, int* B, int cur) {
   if(cur == n) {
@@ -15,6 +16,8 @@ void print_subset(int n, int* B, int cur) {
 
 int B[10];
 int main() {
-  print_subset(5, B, 0);
+  int n;
+  scanf("%d", &n);
+  print_subset(n, B, 0);
   return 0;
 }
