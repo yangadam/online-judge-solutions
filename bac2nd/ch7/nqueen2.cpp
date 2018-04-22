@@ -1,4 +1,7 @@
-#include<stdio.h>
+#include<cstdio>
+#include<cstring>
+using namespace std;
+
 int C[50], vis[3][50], tot = 0, n = 8, nc = 0;
 
 void search(int cur) {
@@ -17,6 +20,7 @@ void search(int cur) {
 }
 
 int main() {
+  scanf("%d", &n);
   memset(vis, 0, sizeof(vis));
   search(0);
   printf("%d\n", tot);

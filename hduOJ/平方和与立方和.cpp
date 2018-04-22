@@ -2,7 +2,7 @@
 int main()
 {
 	int m,n;
-	__int64 x,y;
+	long long x, y;
 	while(scanf("%d%d",&m,&n)!=EOF)
 	{
 		int temp;
@@ -20,7 +20,7 @@ int main()
 			else
 				y+=i*i*i;
 		}
-		printf("%I64d %I64d\n",x,y);
+		printf("%lld %lld\n",x,y);
 	}
 	return 0;
 }
