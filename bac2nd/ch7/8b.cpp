@@ -1,4 +1,5 @@
 #include<cstdio>
+#include<cstring>
 #include<set>
 using namespace std;
 
@@ -16,13 +17,13 @@ int hash(State& s) {
   return v % MAXHASHSIZE;
 }
 int try_to_insert(int s) {
-  int h = hash(st[s]);
+  int h = ::hash(st[s]);
   int u = head[h];
   while(u) {
     if(memcmp(st[u], st[s], sizeof(st[s])) == 0) return 0;
-    u = next[u];
+    u = ::next[u];
   }
-  next[s] = head[h];
+  ::next[s] = head[h];
   head[h] = s;
   return 1;
 }
